@@ -1,0 +1,68 @@
+.content{
+    background-color: white;
+    margin: 1rem;
+    border-radius: 10px;
+    position: relative;
+    top: -110px;
+    padding: 1rem;
+    text-align: center;
+    @include breakpoint-up(large){
+        max-width: 700px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .box{
+            margin: .9rem 0;
+            .line{
+                color: #d1d1d1;
+                width: 20%;
+                margin-top: 0.9rem;
+                @include breakpoint-up(large){
+                    width: 5%; 
+                }
+            }
+            @include breakpoint-up(large){
+                min-width: 200px;
+                border-right: 1px solid #7d7d7d;;
+            }
+        }
+        .box:not(:first-child){
+            border-right: none;
+        }
+        @include breakpoint-up(large){
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+    }
+}
+
+.container__progress{
+    background-color: $darklight;
+    border-radius: 60px;
+    max-width: 90%;
+    margin: 0 auto;
+.progress2 {
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.25);  
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+    margin-bottom: 1rem;
+    .progress-bar2 {
+        height: 9px;
+        border-radius: 30px;
+        background-image: 
+          linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+        transition: 0.4s linear;  
+        transition-property: width, background-color;    
+      }
+}
+.progress-moved {
+    width: 65%; 
+    background-color:  hsl(176, 72%, 28%);  
+    animation: progressAnimation 6s;
+    
+  }
+}

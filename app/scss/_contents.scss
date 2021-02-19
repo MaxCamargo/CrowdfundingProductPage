@@ -1,0 +1,74 @@
+.contents{
+    background-color: white;
+    margin: 1rem;
+    border-radius: 10px;
+    position: relative;
+    top: -110px;
+    padding: 1rem; 
+    @include breakpoint-up(large){
+        max-width: 700px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &__logo{
+        position: absolute;
+        margin: 2rem 0;
+        top: -60px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &__header{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+        text-align: center;
+        justify-content: center;
+        padding-bottom: 1.5rem; 
+        p{
+            width: 100%;
+            margin-bottom: 1.6rem;
+        }
+        .btn{
+            background: $darkCyan;
+            border-radius: 60px;
+            width: 50%;
+            color: white;
+            /* margin: 0 auto; */
+            font-size: 1rem;
+            max-height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 1;
+            @include breakpoint-up(large){
+                width: 30%; 
+            }  
+        }
+        .btn-bookmark{
+           width: 25%;
+            img{
+                height: 50px;
+            }
+        }
+        .bookmark{
+            @include breakpoint-up(large){
+            max-height: 50px;
+            background: $darklight;
+            border-radius: 60px;
+            width: 30%;
+            margin-left: 13rem;
+            display: flex;
+            align-items: center;
+            color: white;
+            img{
+                height: 50px;
+            } 
+            }
+            .bookmark-text{
+                color: $darkGray;
+                font-weight: bold;
+                margin-left: 2rem;
+            }
+        }
+    }
+}
